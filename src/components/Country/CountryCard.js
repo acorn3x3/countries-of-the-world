@@ -10,6 +10,9 @@ export default function CountryCard({ name, iso2, iso3, local_name, continent })
           <div className="iso3">{iso3}</div>
           <div className="local_name">{local_name}</div>
           <div className="continent">{continent}</div>
+          <div className="flag">
+            <img src={`https://flagcdn.com/16x12/${iso2.toLowerCase()}.png`} alt={iso3} />
+          </div>
         </div>
       </div>
     </div>
