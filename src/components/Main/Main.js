@@ -7,9 +7,11 @@ export default function Main() {
 
   return (
     <main>
-      {countries.map((country) => (
-        <CountryCard key={country.name} {...country} />
-      ))}
+      <div className="card-container">
+        {countries.map((country) => (
+          <CountryCard key={country.name} {...country} />
+        ))}
+      </div>
     </main>
   );
 }
