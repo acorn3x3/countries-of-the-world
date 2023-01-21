@@ -3,7 +3,7 @@ import { useCountries } from '../../hooks/useCountries';
 import CountryCard from '../Country/CountryCard';
 
 export default function Main() {
-  const countries = useCountries();
+  const { countries, error } = useCountries();
   const [continent, setContinent] = React.useState('all');
   const continents = [...new Set(countries.map(({ continent }) => continent))];
   const filtered = countries.filter(
@@ -23,6 +23,7 @@ export default function Main() {
         </select>
       </div>
       <br></br>
+      <p style={{ color: 'red' }}>{error} </p>
       <br></br>
 
       <div className="card-container">
